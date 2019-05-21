@@ -1,0 +1,52 @@
+2019-05-21 11:37:02.578 Always, OpenZwave Version 1.4.1 Starting Up
+2019-05-21 11:37:02.578 Info, Setting Up Provided Network Key for Secure Communications
+2019-05-21 11:37:02.578 Warning, Failed - Network Key Not Set
+2019-05-21 11:37:02.578 Info, mgr,     Added driver for controller /dev/ttyUSB0
+2019-05-21 11:37:02.579 Info,   Opening controller /dev/ttyUSB0
+2019-05-21 11:37:02.579 Info, Trying to open serial port /dev/ttyUSB0 (attempt 1)
+2019-05-21 11:37:02.579 Error, ERROR: Cannot open serial port /dev/ttyUSB0. Error code 2
+2019-05-21 11:37:02.579 Error, ERROR: Failed to open serial port /dev/ttyUSB0
+2019-05-21 11:37:02.579 Warning, WARNING: Failed to init the controller (attempt 0)
+2019-05-21 11:37:07.579 Info,   Opening controller /dev/ttyUSB0
+2019-05-21 11:37:07.579 Info, Trying to open serial port /dev/ttyUSB0 (attempt 1)
+2019-05-21 11:37:07.580 Error, ERROR: Cannot open serial port /dev/ttyUSB0. Error code 2
+2019-05-21 11:37:07.580 Error, ERROR: Failed to open serial port /dev/ttyUSB0
+2019-05-21 11:37:07.580 Warning, WARNING: Failed to init the controller (attempt 1)
+2019-05-21 11:37:12.580 Info,   Opening controller /dev/ttyUSB0
+2019-05-21 11:37:12.580 Info, Trying to open serial port /dev/ttyUSB0 (attempt 1)
+2019-05-21 11:37:12.598 Error, ERROR: Cannot open serial port /dev/ttyUSB0. Error code 2
+2019-05-21 11:37:12.598 Error, ERROR: Failed to open serial port /dev/ttyUSB0
+2019-05-21 11:37:12.598 Warning, WARNING: Failed to init the controller (attempt 2)
+2019-05-21 11:37:17.598 Info,   Opening controller /dev/ttyUSB0
+2019-05-21 11:37:17.599 Info, Trying to open serial port /dev/ttyUSB0 (attempt 1)
+2019-05-21 11:37:17.617 Error, ERROR: Cannot open serial port /dev/ttyUSB0. Error code 2
+2019-05-21 11:37:17.617 Error, ERROR: Failed to open serial port /dev/ttyUSB0
+2019-05-21 11:37:17.617 Warning, WARNING: Failed to init the controller (attempt 3)
+2019-05-21 11:37:22.618 Info,   Opening controller /dev/ttyUSB0
+2019-05-21 11:37:22.618 Info, Trying to open serial port /dev/ttyUSB0 (attempt 1)
+2019-05-21 11:37:22.635 Error, ERROR: Cannot open serial port /dev/ttyUSB0. Error code 2
+2019-05-21 11:37:22.636 Error, ERROR: Failed to open serial port /dev/ttyUSB0
+2019-05-21 11:37:22.636 Warning, WARNING: Failed to init the controller (attempt 4)
+2019-05-21 11:37:22.636 Detail, contrlr, Notification: DriverFailed
+2019-05-21 11:37:22.636 Info, mgr,     Driver for controller /dev/ttyUSB0 pending removal
+2019-05-21 11:37:22.636 Detail, Notification: DriverRemoved
+2019-05-21 11:37:22.636 Always, ***************************************************************************
+2019-05-21 11:37:22.637 Always, *********************  Cumulative Network Statistics  *********************
+2019-05-21 11:37:22.637 Always, *** General
+2019-05-21 11:37:22.637 Always, Driver run time: . .  . 0 days, 0 hours, 0 minutes
+2019-05-21 11:37:22.637 Always, Frames processed: . . . . . . . . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.637 Always, Total messages successfully received: . . . . . . . . . . 0
+2019-05-21 11:37:22.637 Always, Total Messages successfully sent: . . . . . . . . . . . . 0
+2019-05-21 11:37:22.637 Always, ACKs received from controller:  . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.637 Always, *** Errors
+2019-05-21 11:37:22.637 Always, Unsolicited messages received while waiting for ACK:  . . 0
+2019-05-21 11:37:22.638 Always, Reads aborted due to timeouts:  . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.638 Always, Bad checksum errors:  . . . . . . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.638 Always, CANs received from controller:  . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.638 Always, NAKs received from controller:  . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.638 Always, Out of frame data flow errors:  . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.638 Always, Messages retransmitted: . . . . . . . . . . . . . . . . . 0
+2019-05-21 11:37:22.638 Always, Messages dropped and not delivered: . . . . . . . . . . . 0
+2019-05-21 11:37:22.638 Always, ***************************************************************************
+2019-05-21 11:37:22.639 Warning, WARNING: Tried to write driver config with no home ID set
+2019-05-21 11:37:22.639 Info, mgr,     Driver for controller /dev/ttyUSB0 removed
