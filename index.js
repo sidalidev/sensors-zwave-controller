@@ -6,13 +6,14 @@ var zwave = new ZWave({
 });
 
 zwavedriverpaths = {
-  "darwin": '/dev/cu.usbmodem1411',
-  "linux": '/dev/ttyACM0',
-  "windows": '\\\\.\\COM3'
+  darwin: '/dev/cu.usbmodem1411',
+  linux: '/dev/ttyACM0',
+  windows: '\\\\.\\COM3'
 }
 
 var nodes = [];
 var homeid = null;
+
 zwave.on('driver ready', function(home_id) {
   homeid = home_id;
   console.log('scanning homeid=0x%s...', homeid.toString(16));
@@ -21,9 +22,7 @@ zwave.on('driver ready', function(home_id) {
 zwave.on('driver failed', function() {
   console.log('failed to start driver');
   zwave.disconnect();
-  console.log('disconnected from zwave');
   process.exit();
-  console.log('exited process');
 });
 
 zwave.on('node added', function(nodeid) {
@@ -126,18 +125,25 @@ zwave.on('notification', function(nodeid, notif) {
   }
 });
 
+
 zwave.on('scan complete', function() {
-  console.log('====> scan complete');
-  // set dimmer node 5 to 50%
-  //    zwave.setValue(5,38,1,0,50);
-  //zwave.setValue({node_id:5,	class_id: 38,	instance:1,	index:0}, 50 );
-  zwave.requestAllConfigParams(3);
+    console.log('====> scan complete, hit ^C to finish.');
+    // set dimmer node 5 to 50%
+    //zwave.setValue(5,38,1,0,50);
+    // zwave.setValue( {node_id:5, class_id: 38, instance:1, index:0}, 50);
+    // Add a new device to the ZWave controller
+    if (zwave.hasOwnProperty('beginControllerCommand')) {
+      // using legacy mode (OpenZWave version < 1.3) - no security
+      zwave.beginControllerCommand('AddDevice', true);
+    } else {
+      // using new security API
+      // set this to 'true' for secure devices eg. door locks
+      zwave.addNode(false);
+    }
 });
 
-zwave.on('controller command', function(n, rv, st, msg) {
-  console.log(
-    'controller commmand feedback: %s node==%d, retval=%d, state=%d', msg,
-    n, rv, st);
+zwave.on('controller command', function(r,s) {
+    console.log('controller commmand feedback: r=%d, s=%d',r,s);
 });
 
 console.log("connecting to " + zwavedriverpaths[os.platform()]);
