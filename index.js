@@ -62,7 +62,7 @@ zwave.on('value changed', function(nodeid, comclass, value) {
       nodes[nodeid]['classes'][comclass][value.index]['value'],
       value['value']
     )
-    SOCKET.emit(value['label'], {
+    SOCKET.emit(value['label'].toLowerCase(), {
       nodeid,
       comclass,
       label: value['label'],
