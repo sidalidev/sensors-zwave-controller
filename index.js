@@ -2,7 +2,7 @@ const ZWave = require('openzwave-shared')
 const os = require('os')
 const io = require('socket.io-client')
 
-SOCKET = io('http://172.20.10.8:3000')
+SOCKET = io('http://206c378e.ngrok.io')
 
 var zwave = new ZWave({
   ConsoleOutput: false
@@ -158,11 +158,11 @@ zwave.on('scan complete', function() {
   // Add a new device to the ZWave controller
   if (zwave.hasOwnProperty('beginControllerCommand')) {
     // using legacy mode (OpenZWave version < 1.3) - no security
-    zwave.beginControllerCommand('AddDevice', true)
+    // zwave.beginControllerCommand('AddDevice', true)
   } else {
     // using new security API
     // set this to 'true' for secure devices eg. door locks
-    zwave.addNode(false)
+    // zwave.addNode(false)
   }
 })
 
