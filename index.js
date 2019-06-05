@@ -2,7 +2,7 @@ const ZWave = require('openzwave-shared')
 const os = require('os')
 const io = require('socket.io-client')
 
-SOCKET = io('http://206c378e.ngrok.io')
+SOCKET = io('https://f2903f85.ngrok.io')
 
 var zwave = new ZWave({
   ConsoleOutput: false
@@ -62,7 +62,13 @@ zwave.on('value changed', function(nodeid, comclass, value) {
       nodes[nodeid]['classes'][comclass][value.index]['value'],
       value['value']
     )
-    SOCKET.emit(value['label'].toLowerCase(), {
+    let nodeName
+    if (nodeid == 2) {
+      nodeName = 'eye'
+    } else if (nodeid == 3){
+      nodeName = 'wallplug'
+    }
+    SOCKET.emit(nodeName, {
       nodeid,
       comclass,
       label: value['label'],
