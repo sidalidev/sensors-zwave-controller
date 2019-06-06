@@ -2,7 +2,7 @@ const ZWave = require('openzwave-shared')
 const os = require('os')
 const io = require('socket.io-client')
 
-SOCKET = io('https://f2903f85.ngrok.io')
+SOCKET = io('https://3e4365ff.ngrok.io')
 
 var zwave = new ZWave({
   ConsoleOutput: false
